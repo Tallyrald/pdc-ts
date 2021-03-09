@@ -1,4 +1,3 @@
-import 'mocha';
 import * as chai from 'chai';
 import * as ChaiAsPromised from 'chai-as-promised';
 import { PdcTs } from '../ts/pdc-ts';
