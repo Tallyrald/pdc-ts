@@ -1,6 +1,6 @@
 {
 	"name": "pdc-ts",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Pandoc wrapper for Typescript applications running on NodeJS",
 	"main": "dist/pdc-ts.js",
 	"types": "dist/pdc-ts.d.ts",
