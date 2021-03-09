@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Pandoc wrapper for Typescript applications running on NodeJS",
 	"main": "dist/pdc-ts.js",
+	"types": "dist/pdc-ts.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Tallyrald/pdc-ts.git"
@@ -18,8 +19,10 @@
 		"node",
 		"nodejs"
 	],
+	"files": ["dist/**/*"],
 	"scripts": {
 		"build": "tsc",
+		"prepublishOnly" : "npm run build && npm test",
 		"test": "ts-mocha tests/**/*.ts --reporter spec"
 	},
 	"author": "Tallyrald <tally.github@gmail.com>",
