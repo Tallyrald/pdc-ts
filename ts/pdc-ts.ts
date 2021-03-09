@@ -45,6 +45,8 @@ export class PdcTs {
 
 			if (args.outputToFile && (args.destFilePath == null || args.destFilePath == undefined)) {
 				reject('No file destination provided, aborting.')
+
+				return;
 			}
 
 			if (args.sourceText) {
@@ -68,11 +70,15 @@ export class PdcTs {
 				});
 			} else {
 				reject('No input, aborting.');
+
+				return;
 			}
 
 			// listen on error
 			pandoc.on('error', err => {
 				reject(err.message);
+
+				return;
 			});
 
 			// collect result data
@@ -99,9 +105,13 @@ export class PdcTs {
 
 				if (code !== 0) {
 					reject(msg);
+
+					return;
 				}
 
 				resolve(result);
+
+				return;
 			});
 
 			// Finally, send source string if available
