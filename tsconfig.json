@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./ts",
+		"declaration": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"outDir": "dist",
+		"removeComments": true,
+		"sourceMap": false,
+		"strict": false,
+		"target": "es2020",
+	},
+	"exclude": [],
+	"include": ["ts"]
+}
